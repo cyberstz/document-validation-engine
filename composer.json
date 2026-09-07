@@ -1,0 +1,31 @@
+{
+    "name": "cyberstz/document-validation-engine",
+    "description": "Validation component for a multi-tenant document processing platform.",
+    "type": "project",
+    "licence": "MIT",
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            // "DocumentValidation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            // "DocumentValidation\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        // "test": "phpunit",
+        // "demo": "@php bin/validate-demo.php"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
