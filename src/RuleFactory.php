@@ -72,6 +72,7 @@ final class RuleFactory
     {
         $types = array_keys($this->ruleClasses);
 
+        // For stable order
         sort($types);
 
         return $types;
