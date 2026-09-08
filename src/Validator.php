@@ -29,10 +29,10 @@ final readonly class Validator
             return $rule->validate($document);
         } catch (Throwable $exception) {
             return RuleResult::fail(
-                $rule->type(),
+                $rule::type(),
                 sprintf(
                     'Rule "%s" could not be evaluated (%s): %s',
-                    $rule->type(),
+                    $rule::type(),
                     $exception::class,
                     $exception->getMessage(),
                 ),

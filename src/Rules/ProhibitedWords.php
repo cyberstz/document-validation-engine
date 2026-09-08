@@ -6,6 +6,7 @@ namespace DocumentValidation\Rules;
 
 use DocumentValidation\Document;
 use DocumentValidation\Exceptions\InvalidRuleConfiguration;
+use DocumentValidation\RuleConfiguration;
 use DocumentValidation\RuleResult;
 use DocumentValidation\ValidationRule;
 use RuntimeException;
@@ -48,9 +49,17 @@ final readonly class ProhibitedWords implements ValidationRule
         $this->words = $normalized;
     }
 
-    public function type(): string
+    public static function type(): string
     {
         return self::TYPE;
+    }
+
+    public static function fromConfiguration(RuleConfiguration $configuration): static
+    {
+        return new self(
+            $configuration->requireList('words'),
+            $configuration->optionalBool('case_sensitive', false),
+        );
     }
 
     public function validate(Document $document): RuleResult

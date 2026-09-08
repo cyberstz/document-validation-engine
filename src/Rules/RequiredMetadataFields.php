@@ -6,6 +6,7 @@ namespace DocumentValidation\Rules;
 
 use DocumentValidation\Document;
 use DocumentValidation\Exceptions\InvalidRuleConfiguration;
+use DocumentValidation\RuleConfiguration;
 use DocumentValidation\RuleResult;
 use DocumentValidation\ValidationRule;
 
@@ -47,9 +48,14 @@ final readonly class RequiredMetadataFields implements ValidationRule
         $this->fields = $normalized;
     }
 
-    public function type(): string
+    public static function type(): string
     {
         return self::TYPE;
+    }
+
+    public static function fromConfiguration(RuleConfiguration $configuration): static
+    {
+        return new self($configuration->requireList('fields'));
     }
 
     public function validate(Document $document): RuleResult

@@ -6,7 +6,9 @@ namespace DocumentValidation;
 
 interface ValidationRule
 {
-    public function type(): string;
+    public static function type(): string;
+
+    public static function fromConfiguration(RuleConfiguration $configuration): static;
 
     public function validate(Document $document): RuleResult;
 }
