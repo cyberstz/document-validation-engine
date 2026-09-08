@@ -8,7 +8,9 @@ use Throwable;
 
 final readonly class Validator
 {
-    public function __construct(private RuleProvider $ruleProvider) {}
+    public function __construct(private RuleProvider $ruleProvider)
+    {
+    }
 
     public function validate(Document $document): ValidationResult
     {

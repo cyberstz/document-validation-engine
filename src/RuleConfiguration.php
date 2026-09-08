@@ -11,7 +11,8 @@ final readonly class RuleConfiguration
     public function __construct(
         private array $values,
         private string $ruleType,
-    ) {}
+    ) {
+    }
 
     public function requireInt(string $key): int
     {

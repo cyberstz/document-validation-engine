@@ -2,7 +2,7 @@
     "name": "cyberstz/document-validation-engine",
     "description": "Validation component for a multi-tenant document processing platform.",
     "type": "project",
-    "licence": "MIT",
+    "license": "MIT",
     "require": {
         "php": "^8.3"
     },

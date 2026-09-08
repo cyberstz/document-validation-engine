@@ -20,11 +20,15 @@ final class RuleFactory
         return (new self())
             ->register(
                 MaximumDocumentSize::TYPE,
-                static fn (RuleConfiguration $config): ValidationRule => new MaximumDocumentSize($config->requireInt('max_bytes'))
+                static fn (RuleConfiguration $config): ValidationRule => new MaximumDocumentSize(
+                    $config->requireInt('max_bytes')
+                )
             )
             ->register(
                 RequiredMetadataFields::TYPE,
-                static fn (RuleConfiguration $config): ValidationRule => new RequiredMetadataFields($config->requireList('fields'))
+                static fn (RuleConfiguration $config): ValidationRule => new RequiredMetadataFields(
+                    $config->requireList('fields')
+                )
             )
             ->register(
                 ProhibitedWords::TYPE,

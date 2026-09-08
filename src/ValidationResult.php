@@ -6,7 +6,9 @@ namespace DocumentValidation;
 
 final readonly class ValidationResult
 {
-    private function __construct(public array $ruleResults) {}
+    private function __construct(public array $ruleResults)
+    {
+    }
 
     public static function from(iterable $ruleResults): self
     {

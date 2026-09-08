@@ -11,7 +11,8 @@ final readonly class RuleResult
     private function __construct(
         public string $ruleType,
         public array $errors,
-    ) {}
+    ) {
+    }
 
     public static function pass(string $ruleType): self
     {
