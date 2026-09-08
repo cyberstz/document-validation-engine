@@ -11,17 +11,17 @@
     },
     "autoload": {
         "psr-4": {
-            // "DocumentValidation\\": "src/"
+            "DocumentValidation\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            // "DocumentValidation\\Tests\\": "tests/"
+            "DocumentValidation\\Tests\\": "tests/"
         }
     },
     "scripts": {
-        // "test": "phpunit",
-        // "demo": "@php bin/validate-demo.php"
+        "test": "phpunit",
+        "demo": "@php bin/validate-demo.php"
     },
     "config": {
         "sort-packages": true
